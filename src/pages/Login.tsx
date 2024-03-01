@@ -5,15 +5,7 @@ import { setUser } from "../redux/features/auth/authSlice";
 import { useLoginMutation } from "../redux/features/auth/authApi";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-
-// interface FormValues {
-//   email: string;
-//   password: string;
-// }
-// interface FormValues {
-//   email: string;
-//   password: string;
-// }
+import { verifyToken } from "@/utils/verifyToken";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -34,7 +26,10 @@ const Login = () => {
     const res = await login(userInfo).unwrap();
 
     console.log(res);
-    dispatch(setUser({ user: {}, token: res.token }));
+
+    const user = verifyToken(res.token);
+    console.log(user);
+    dispatch(setUser({ user: user, token: res.token }));
     toast.success("Successfully Login");
     navigate("/");
   };

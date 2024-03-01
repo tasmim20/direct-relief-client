@@ -8,6 +8,10 @@ import CreateSupply from "@/pages/supply/CreateSupply";
 import SupplyTable from "@/pages/supply/SupplyTable";
 import Register from "@/pages/Register";
 import SupplyDetail from "@/pages/supply/SupplyDetail";
+import CreateTestimonial from "@/pages/home/testimonial/CreateTestimonial";
+import CreateVolunteer from "@/pages/volunteer/CreateVolunteer";
+import AboutUs from "@/pages/aboutUs/AboutUs";
+import LeaderBoard from "@/pages/leaderBoard/LeaderBoard";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +38,18 @@ const router = createBrowserRouter([
         path: "register",
         element: <Register />,
       },
+      {
+        path: "volunteer",
+        element: <CreateVolunteer />,
+      },
+      {
+        path: "about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "leader-board",
+        element: <LeaderBoard />,
+      },
     ],
   },
   {
@@ -55,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "create-supply",
         element: <CreateSupply />,
+      },
+      {
+        path: "create-testimonial",
+        element: <CreateTestimonial />,
       },
     ],
   },

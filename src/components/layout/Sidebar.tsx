@@ -55,6 +55,20 @@ const Sidebar = () => {
             <NotebookPen className="shrink-0" />
             <span className="truncate">Create Supply</span>
           </NavLink>
+          <NavLink
+            to="/dashboard/create-testimonial"
+            className={({ isActive }) =>
+              cn(
+                "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                {
+                  "bg-dark-gray text-blue": isActive,
+                }
+              )
+            }
+          >
+            <NotebookPen className="shrink-0" />
+            <span className="truncate">Create Testimonial</span>
+          </NavLink>
         </nav>
       </aside>
     </div>

@@ -12,6 +12,7 @@ const CreateSupply = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = async (data: any) => {
     const body = {
+      name: data.name,
       image: data.image,
       category: data.category,
       title: data.title,
@@ -39,6 +40,19 @@ const CreateSupply = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           <div className="mb-4">
             <label htmlFor="pictureUrl" className="block font-bold">
+              Name of the Donor
+            </label>
+            <input
+              {...register("name")}
+              type="text"
+              id="name"
+              name="name"
+              className="input input-bordered border-gray-500 bg-transparent pr-10 "
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="pictureUrl" className="block font-bold">
               Image of the donation
             </label>
             <input
@@ -59,7 +73,7 @@ const CreateSupply = () => {
               type="text"
               id="title"
               name="title"
-              className="input input-bordered border-gray-500 bg-transparent pr-10 "
+              className="input input-bordered w-full border-gray-500 bg-transparent pr-10 "
               required
             />
           </div>
@@ -80,7 +94,7 @@ const CreateSupply = () => {
               <option value="Medications">Medications</option>
             </select>
           </div>
-          <div className="mb-4">
+          <div className="mb-4 w-full">
             <label htmlFor="amount" className="block font-bold">
               Amount
             </label>
@@ -89,7 +103,7 @@ const CreateSupply = () => {
               type="number"
               id="amount"
               name="amount"
-              className="input input-bordered border-gray-500 bg-transparent pr-10 "
+              className="input input-bordered border-gray-500 w-full  bg-transparent pr-10 "
               required
             />
           </div>

@@ -30,6 +30,9 @@ const Navbar = () => {
           <NavLink to="supplies">All Supplies</NavLink>
           {token ? (
             <>
+              <NavLink to="/volunteer">Volunteer</NavLink>
+              <NavLink to="/about-us">About Us</NavLink>
+              <NavLink to="/leader-board">Leaderboard</NavLink>
               <NavLink to="/dashboard">Dashboard</NavLink>
               <button onClick={handleLogout}>
                 <Link
