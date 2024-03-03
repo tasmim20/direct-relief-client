@@ -29,7 +29,7 @@ const RecentDonation = () => {
   return (
     <Container>
       <div className=" mb-10">
-        <h2 className="text-4xl pb-12 text-black text-center font-bold mb-10 ">
+        <h2 className="text-4xl pt-20 text-black text-center font-bold mb-10 ">
           Our Recent Donation
         </h2>
       </div>

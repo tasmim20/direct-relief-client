@@ -12,6 +12,7 @@ import CreateTestimonial from "@/pages/home/testimonial/CreateTestimonial";
 import CreateVolunteer from "@/pages/volunteer/CreateVolunteer";
 import AboutUs from "@/pages/aboutUs/AboutUs";
 import LeaderBoard from "@/pages/leaderBoard/LeaderBoard";
+import Community from "@/pages/community/Community";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "leader-board",
         element: <LeaderBoard />,
+      },
+      {
+        path: "community",
+        element: <Community />,
       },
     ],
   },

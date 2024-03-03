@@ -10,7 +10,7 @@ import {
 
 import { useGetVolunteerQuery } from "@/redux/features/volunteer/volunteerApi";
 
-interface EventType {
+interface VolunteerType {
   _id: string;
   email: string;
   number: number;
@@ -43,7 +43,7 @@ const AboutUs = () => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {data.result.map((item: EventType) => (
+                {data.result.map((item: VolunteerType) => (
                   <TableRow key={item._id}>
                     <TableCell>{item.email}</TableCell>
                     <TableCell className="font-medium">{item.number}</TableCell>
