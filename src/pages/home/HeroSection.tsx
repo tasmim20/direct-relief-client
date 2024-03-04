@@ -12,7 +12,7 @@ const HeroSection = () => {
           <div className="lg:pr-10 ">
             <h1 className="lg:text-5xl text-3xl font-bold">Direct Relief</h1>
 
-            <p className="py-6 mt-3">
+            <p className="py-3 mt-3">
               Direct Relief works in the Bangladesh and internationally to
               expand access to
               <br /> medicine and healthcare by equipping doctors and nurses

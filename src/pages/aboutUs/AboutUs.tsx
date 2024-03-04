@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/table";
 
 import { useGetVolunteerQuery } from "@/redux/features/volunteer/volunteerApi";
+import HeroSection from "../home/HeroSection";
 
 interface VolunteerType {
   _id: string;
@@ -26,8 +27,11 @@ const AboutUs = () => {
   }
 
   return (
-    <div className="">
-      <h2 className="text-4xl font-bold text-black text-center pt-32 pb-10 ">
+    <div className="pt-10 mb-20">
+      <div className="pt-16">
+        <HeroSection />
+      </div>
+      <h2 className="text-4xl font-bold text-black text-center pt-8 pb-16 ">
         Our Volunteers
       </h2>
       {isLoading && <p>Loading...</p>}

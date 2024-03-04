@@ -5,11 +5,11 @@ import Footer from "@/pages/home/Footer";
 const MainLayout = () => {
   return (
     <div>
-      <Navbar />
-      <Outlet />
-      <div className="mt-32">
-        <Footer />
+      <div className="">
+        <Navbar />
       </div>
+      <Outlet />
+      <Footer />
     </div>
   );
 };

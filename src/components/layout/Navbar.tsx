@@ -90,7 +90,7 @@ const Navbar = () => {
     // </header>
     <div
       style={{ backgroundColor: "#0c2b64" }}
-      className=" navbar uppercase h-20  fixed z-[999] w-full text-white font-extrabold"
+      className=" navbar uppercase h-20  fixed z-[999] w-full text-white font-bold text-sm"
     >
       <div className="navbar-start">
         <div className="dropdown">
@@ -112,7 +112,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-slate-400"
           >
             <li>
               {" "}
@@ -122,27 +122,30 @@ const Navbar = () => {
               {" "}
               <NavLink to="supplies">All Supplies</NavLink>
             </li>
+            <li>
+              {" "}
+              <NavLink to="/volunteer">Volunteer</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink to="/about-us">About Us</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink to="/community">Community</NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink to="/leader-board">Leaderboard</NavLink>
+            </li>
             {token ? (
               <>
                 <li>
                   {" "}
-                  <NavLink to="/volunteer">Volunteer</NavLink>
-                </li>
-                <li>
-                  {" "}
-                  <NavLink to="/about-us">About Us</NavLink>
-                </li>
-                <li>
-                  {" "}
-                  <NavLink to="/community">Community</NavLink>
-                </li>
-                <li>
-                  {" "}
-                  <NavLink to="/leader-board">Leaderboard</NavLink>
-                </li>
-                <li>
-                  {" "}
                   <NavLink to="/dashboard">Dashboard</NavLink>
+                </li>
+                <li onClick={handleLogout} className=" bg-red-900 ">
+                  <p>Logout</p>
                 </li>
               </>
             ) : (
@@ -158,7 +161,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 ps-10">
           <li>
             {" "}
             <NavLink to="/">Home</NavLink>
@@ -202,7 +205,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <button
-          className="theme-toggle m-3 mr-6"
+          className="theme-toggle mr-6"
           onClick={toggleTheme}
           aria-label={isDarkMode ? "Light Mode" : "Dark Mode"}
         >
