@@ -1,11 +1,11 @@
 import Container from "@/components/Container";
 import About from "./About";
 import Header from "./Header";
-import HeroSection from "./HeroSection";
-
 import Gallery from "./Gallery";
 import Testimonial from "./testimonial/Testimonial";
 import RecentDonation from "./RecentDonation";
+import Hero from "../aboutUs/Hero";
+import Partner from "./Partner";
 
 const Home = () => {
   return (
@@ -18,12 +18,15 @@ const Home = () => {
 
         <Gallery />
 
-        <div className="divider divider-primary  font-bold text-5xl text-black">
-          What We Do
-        </div>
         <About />
-        <div className="divider divider-primary  font-bold text-5xl text-black"></div>
-        <HeroSection />
+      </Container>
+      <div className="  font-bold text-5xl text-black">
+        <Partner />
+      </div>
+      <Container>
+        <div className="text-black my-20 pb-16">
+          <Hero />
+        </div>
       </Container>
     </div>
   );

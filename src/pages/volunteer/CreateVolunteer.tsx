@@ -4,6 +4,10 @@ import { useAppSelector } from "@/redux/hooks";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import WhatTheySay from "./WhatTheySay";
+import Container from "@/components/Container";
+import Benefit from "./Benefit";
+import HeroSection from "./HeroSection";
 
 interface User {
   email: string;
@@ -21,6 +25,8 @@ const CreateVolunteer = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = async (data: any) => {
     const body = {
+      name: data.name,
+      profession: data.profession,
       email: data.email,
       number: data.number,
       location: data.location,
@@ -36,66 +42,76 @@ const CreateVolunteer = () => {
   };
 
   return (
-    <div className="pt-28 flex justify-center items-center">
-      <div>
-        <h1 className="font-bold text-lime text-4xl text-center my-6 pb-4">
-          Work as a Volunteer
-        </h1>
-        <form
-          className=" border  p-16 shadow-blue-900  shadow-sm"
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <div className="form-control mb-7">
-            <label className="label">
-              <span className="label-text text-black font-bold">
-                Your Email
-              </span>
-            </label>
-            <input
-              defaultValue={user?.email ?? ""}
-              {...register("email")}
-              name="email"
-              type="email"
-              placeholder="email"
-              className="input input-bordered rounded-none  bg-white border-blue-900"
-              required
-            />
+    <div className=" pt-10">
+      <div className="mt-32 mb-16">
+        <HeroSection />
+      </div>
+      <div className="mt-32 mb-16">
+        <Benefit />
+      </div>
+      <Container className="mx-auto max-w-6xl">
+        <WhatTheySay />
+      </Container>
+      <div className=" text-black py-20 ">
+        <div className=" lg:flex-row-reverse">
+          <div className=" max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+            <div className=" text-black">
+              <h1 className="text-5xl  font-bold pb-10">
+                Interested in becoming <br /> our volunteer?
+              </h1>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-3 pb-5 text-black">
+                  <input
+                    {...register("name")}
+                    type="text"
+                    placeholder=" Your Name"
+                    name="name"
+                    className="input input-ghost rounded-md sm:max-w-full bg-transparent   border-gray-500  w-full"
+                  />
+
+                  <input
+                    defaultValue={user?.email ?? ""}
+                    {...register("email")}
+                    type="text"
+                    placeholder=" Your Email"
+                    name="email"
+                    className="input input-ghost bg-transparent  w-full rounded-md border border-gray-500  "
+                  />
+                  <input
+                    {...register("profession")}
+                    type="text"
+                    placeholder=" Your Profession"
+                    name="profession"
+                    className="input input-ghost bg-transparent  w-full rounded-md border border-gray-500  "
+                  />
+                  <input
+                    {...register("number")}
+                    type="number"
+                    placeholder=" Phone Number"
+                    name="number"
+                    className="input input-ghost bg-transparent  w-full rounded-md border border-gray-500  "
+                  />
+                </div>
+
+                <textarea
+                  {...register("location")}
+                  name="location"
+                  className="textarea rounded-md textarea-ghost bg-transparent    border-gray-500 w-full h-40"
+                  placeholder=" Your Location"
+                ></textarea>
+
+                <div className="grid justify-start mt-4">
+                  <input
+                    style={{ backgroundColor: "#0c2b64" }}
+                    className="btn w-full rounded-md px-10 text-white"
+                    type="submit"
+                    value="Submit Now"
+                  />
+                </div>
+              </form>
+            </div>
           </div>
-          <div className="form-control mb-7">
-            <label className="label">
-              <span className="label-text text-black font-bold">
-                Phone Number
-              </span>
-            </label>
-            <input
-              {...register("number")}
-              name="number"
-              type="number"
-              placeholder="number"
-              className="input input-bordered rounded-none  bg-white border-blue-900"
-              required
-            />
-          </div>
-          <div className="form-control mb-7">
-            <label className="label">
-              <span className="label-text text-black font-bold">location</span>
-            </label>
-            <input
-              {...register("location")}
-              name="location"
-              type="location"
-              placeholder="location"
-              className="input input-bordered rounded-none  bg-white border-blue-900"
-              required
-            />
-          </div>
-          <input
-            style={{ backgroundColor: "#0c2b64" }}
-            className="btn w-full rounded-none text-white"
-            type="submit"
-            value="Submit"
-          />
-        </form>
+        </div>
       </div>
     </div>
   );

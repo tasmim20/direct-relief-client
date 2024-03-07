@@ -10,6 +10,8 @@ import {
 
 import { useGetVolunteerQuery } from "@/redux/features/volunteer/volunteerApi";
 import HeroSection from "../home/HeroSection";
+import Hero from "./Hero";
+import OurMission from "./OurMission";
 
 interface VolunteerType {
   _id: string;
@@ -30,6 +32,10 @@ const AboutUs = () => {
     <div className="pt-10 mb-20">
       <div className="pt-16">
         <HeroSection />
+      </div>
+      <div className="pb-20">
+        <h2 className="text-4xl font-bold text-center my-14">Our Mission</h2>
+        <OurMission />
       </div>
       <h2 className="text-4xl font-bold text-black text-center pt-8 pb-16 ">
         Our Volunteers
@@ -59,6 +65,10 @@ const AboutUs = () => {
           </Container>
         </div>
       )}
+
+      <div className="py-10">
+        <Hero />
+      </div>
     </div>
   );
 };

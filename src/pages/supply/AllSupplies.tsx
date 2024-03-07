@@ -40,8 +40,8 @@ const AllSupplies = () => {
               style={{ backgroundColor: "#f6f7f9" }}
             >
               <CardHeader className="flex justify-center items-center">
-                <figure className="-m-6">
-                  <img className="" src={item.image} alt="" />
+                <figure className="-m-5 ">
+                  <img className="h-56 rounded-md" src={item.image} alt="" />
                 </figure>
               </CardHeader>
 
