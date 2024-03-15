@@ -40,7 +40,10 @@ const HeroSection = () => {
             </p>
             <div className="grid justify-start mt-4">
               <input
-                style={{ backgroundColor: "#0c2b64" }}
+                style={{
+                  background:
+                    "linear-gradient(135deg, #0c2b64 50%, #4facfe 100%)",
+                }}
                 className="btn w-full rounded-md px-10 text-white"
                 type="submit"
                 value="Get Started"

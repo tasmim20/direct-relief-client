@@ -28,7 +28,12 @@ const RecentDonation = () => {
 
   return (
     <Container>
-      <div className=" mb-10">
+      <div
+        className=" mb-10"
+        data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+      >
         <h2 className="text-4xl pt-20 text-black text-center font-bold mb-10 ">
           Our Recent Donation
         </h2>
@@ -38,6 +43,9 @@ const RecentDonation = () => {
         <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           {data.result.slice(0, 6).map((item: EventType, index: number) => (
             <Card
+              data-aos="fade-up"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
               key={index}
               className="border-none shadow-md"
               style={{ backgroundColor: "#f6f7f9" }}
@@ -58,10 +66,7 @@ const RecentDonation = () => {
               </CardContent>
               <CardFooter className="flex justify-between">
                 <h2 className="text-sm font-bold">Quantity: {item.amount}</h2>
-                <Button
-                  className="  text-center"
-                  style={{ backgroundColor: "#0c2b64" }}
-                >
+                <Button className="  text-center bg-blue-900 hover:text-black hover:bg-white hover:border-2 ">
                   <Link
                     to={`/supplies/${item._id}`}
                     state={{ supply: item }}
@@ -75,11 +80,17 @@ const RecentDonation = () => {
           ))}
         </div>
       )}
-      <div className="grid justify-center items-center mt-8">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        className="grid justify-center items-center mt-8"
+      >
         <Button
           className="  text-center uppercase rounded-none
           "
-          style={{ backgroundColor: "#0c2b64" }}
+          style={{
+            background: "linear-gradient(135deg, #0c2b64 50%, #4facfe 100%)",
+          }}
         >
           <Link to="/supplies" className="text-center px-8 ">
             View All

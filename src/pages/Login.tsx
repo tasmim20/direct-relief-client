@@ -1,11 +1,11 @@
 import { useForm } from "react-hook-form";
-
 import { useAppDispatch } from "../redux/hooks";
 import { setUser } from "../redux/features/auth/authSlice";
 import { useLoginMutation } from "../redux/features/auth/authApi";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { verifyToken } from "@/utils/verifyToken";
+import login1 from "../assets/images/Tablet login.gif";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -35,8 +35,8 @@ const Login = () => {
   };
 
   return (
-    <div className="pt-32 flex justify-center items-center">
-      <div>
+    <div className="pt-32 flex justify-evenly flex-col-reverse lg:flex-row-reverse">
+      <div className="mb-20">
         <h1 className="font-bold text-lime text-4xl text-center my-6 pb-4">
           Login Now
         </h1>
@@ -90,6 +90,10 @@ const Login = () => {
             </p>
           </div>
         </form>
+      </div>
+      <div>
+        {" "}
+        <img className="   rounded-lg" src={login1}></img>
       </div>
     </div>
   );

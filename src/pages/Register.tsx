@@ -4,6 +4,7 @@ import { setUser } from "../redux/features/auth/authSlice";
 import { useSignUpMutation } from "../redux/features/auth/authApi";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import register1 from "../assets/images/Sign up.gif";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -30,8 +31,12 @@ const Register = () => {
   };
 
   return (
-    <div className="pt-28 flex justify-center items-center">
-      <div>
+    <div className="pt-28 flex justify-evenly flex-col-reverse lg:flex-row-reverse">
+      <div className="mt-16">
+        {" "}
+        <img className="   rounded-lg" src={register1}></img>
+      </div>
+      <div className="mb-20">
         <h1 className="font-bold text-lime text-4xl text-center my-6 pb-4">
           Register Now
         </h1>

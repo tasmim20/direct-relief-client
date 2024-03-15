@@ -26,7 +26,7 @@ const AllSupplies = () => {
   }
 
   return (
-    <Container>
+    <Container className="py-10">
       <div className="pt-32">
         <h2 className="text-3xl text-center font-bold mb-10">All Supplies</h2>
       </div>
@@ -55,10 +55,7 @@ const AllSupplies = () => {
               </CardContent>
               <CardFooter className="flex justify-between">
                 <h2 className="text-sm font-bold">Quantity: {item.amount}</h2>
-                <Button
-                  className="text-center"
-                  style={{ backgroundColor: "#0c2b64" }}
-                >
+                <Button className="text-center bg-blue-900 hover:text-black hover:bg-white hover:border-2">
                   <Link
                     to={`/supplies/${item._id}`}
                     state={{ supply: item }}

@@ -4,7 +4,10 @@ const WhoWeAre = () => {
       <div className=" py-28 mb-10">
         <div className="hero  max-w-6xl mx-auto ">
           <div className="grid lg:grid-cols-2 grid-cols-1 ">
-            <div className="card shrink-0 max-w-lg relative">
+            <div
+              data-aos="fade-right"
+              className="card shrink-0 max-w-lg relative"
+            >
               <div className="relative">
                 <img
                   src="https://img.freepik.com/free-photo/female-doctor-nurse-with-face-masks-walking-though-corridor-hospital_637285-9093.jpg?t=st=1709851251~exp=1709854851~hmac=fb224780d79da335359da9565b9b648198648ec4e428129a6f2168445ba677c9&w=996"
@@ -28,7 +31,7 @@ const WhoWeAre = () => {
               </div>
             </div>
 
-            <div className=" lg:text-left mt-12 ">
+            <div data-aos="fade-left" className=" lg:text-left mt-12 ">
               <h1 className="text-5xl font-bold">Who we are ? </h1>
 
               <p className="py-8">
@@ -41,7 +44,10 @@ const WhoWeAre = () => {
               </p>
               <div className="grid justify-start mt-4">
                 <input
-                  style={{ backgroundColor: "#0c2b64" }}
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #0c2b64 50%, #4facfe 100%)",
+                  }}
                   className="btn w-full rounded-md px-10 text-white"
                   type="submit"
                   value="Get Started"

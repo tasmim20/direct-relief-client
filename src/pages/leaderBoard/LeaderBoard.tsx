@@ -29,26 +29,41 @@ const LeaderBoard = () => {
   const topTenDonors = sortedDonors.slice(0, 10);
 
   return (
-    <div className="pt-20">
-      <h2 className="text-4xl text-black font-bold text-center my-10">
-        Top 10 Donors
-      </h2>
+    <div className="py-20 max-w-4xl mx-auto">
       {isLoading && <p>Loading...</p>}
       {topTenDonors.length > 0 && (
         <div className=" border p-0 rounded-2xl">
+          <h2 className="text-5xl ml-4 text-blue-950 font-semibold  my-10">
+            Leader Board
+          </h2>
           <Container>
-            <Table>
-              <TableHeader>
+            <Table className=" border-none ">
+              <TableHeader
+                style={{
+                  background:
+                    "linear-gradient(135deg, #0c2b64 40%, #4facfe 100%)",
+                }}
+                className="border-4 border-blue-800 "
+              >
                 <TableRow>
-                  <TableHead>Donor's Name</TableHead>
-                  <TableHead>Donation Amount</TableHead>
+                  <TableHead className="border-4 border-blue-900 text-white">
+                    Donor's Name
+                  </TableHead>
+                  <TableHead className="border-4 border-blue-900 text-white">
+                    Donation Amount
+                  </TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody>
+              <TableBody className=" border-2 border-blue-900">
                 {topTenDonors.map((donor: Donor) => (
-                  <TableRow key={donor._id}>
-                    <TableCell>{donor.name}</TableCell>
-                    <TableCell className="font-medium">
+                  <TableRow
+                    className=" border-2 border-blue-900"
+                    key={donor._id}
+                  >
+                    <TableCell className="bg-blue-50 border border-blue-900   ">
+                      {donor.name}
+                    </TableCell>
+                    <TableCell className="bg-blue-50 border border-blue-900">
                       {donor.amount}$
                     </TableCell>
                   </TableRow>

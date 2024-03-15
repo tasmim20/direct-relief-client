@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div>
       <Navbar />
       <aside
-        className=" col-span-4 h-screen text-white font-bold sticky top-0 left-0 overflow-auto p-4 lg:p-5"
+        className=" col-span-4 lg:w-52 md:w-20 h-screen text-white font-bold sticky top-0 left-0 overflow-auto p-4 mt-5 lg:p-5"
         style={{ backgroundColor: "#a2b5d7" }}
       >
         <nav className="flex flex-col gap-2">
@@ -18,7 +18,7 @@ const Sidebar = () => {
               cn(
                 "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 pt-16 transition-all flex items-center gap-2",
                 {
-                  "bg-dark-gray text-blue": isActive,
+                  "bg-blue-100 text-red-800": isActive,
                 }
               )
             }
@@ -33,7 +33,7 @@ const Sidebar = () => {
               cn(
                 "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
                 {
-                  "bg-dark-gray text-blue": isActive,
+                  "bg-blue-100 text-blue-900": isActive,
                 }
               )
             }
@@ -47,7 +47,7 @@ const Sidebar = () => {
               cn(
                 "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
                 {
-                  "bg-dark-gray text-blue": isActive,
+                  "bg-blue-100 text-blue-900": isActive,
                 }
               )
             }
@@ -61,7 +61,7 @@ const Sidebar = () => {
               cn(
                 "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
                 {
-                  "bg-dark-gray text-blue": isActive,
+                  "bg-blue-100 text-blue-900": isActive,
                 }
               )
             }

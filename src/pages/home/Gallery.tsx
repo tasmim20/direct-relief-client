@@ -120,7 +120,12 @@ const Gallery: React.FC = () => {
 
   return (
     <div className="py-16 mb-16">
-      <h2 className="text-center font-bold text-5xl text-black mb-16 ">
+      <h2
+        data-aos="fade-up"
+        data-aos-easing="ease-in-cubic"
+        data-aos-duration="1000"
+        className="text-center font-bold text-5xl text-black mb-16 "
+      >
         Gallery
       </h2>
       <div className="flex pb-2">
@@ -143,6 +148,7 @@ const Gallery: React.FC = () => {
           .map((image, index) => (
             <div className="relative">
               <img
+                data-aos="zoom-in"
                 key={index}
                 src={image}
                 className="w-full rounded-lg h-96"
@@ -160,6 +166,7 @@ const Gallery: React.FC = () => {
           .map((image, index) => (
             <div className="relative">
               <img
+                data-aos="zoom-in"
                 key={index}
                 src={image}
                 className="w-full rounded-lg h-80"

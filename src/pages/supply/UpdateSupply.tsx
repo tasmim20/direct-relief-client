@@ -21,12 +21,10 @@ const UpdateSupply: React.FC<UpdateServiceProps> = ({
 
   return (
     <div>
-      {/* The button to open modal */}
       <label htmlFor="my-modal" onClick={handleOpen}>
         <Pencil />
       </label>
 
-      {/* Use checked attribute for the checkbox to control its state */}
       <input
         type="checkbox"
         id="my-modal"

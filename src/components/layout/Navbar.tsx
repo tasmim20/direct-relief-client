@@ -4,6 +4,7 @@ import { logout, useCurrentToken } from "@/redux/features/auth/authSlice";
 import who from "../../assets/images/who1.png";
 import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -164,33 +165,117 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 ps-10">
           <li>
             {" "}
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                cn(
+                  "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                  {
+                    "bg-blue-950 text-blue-800": isActive,
+                  }
+                )
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
             {" "}
-            <NavLink to="supplies">All Supplies</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                cn(
+                  "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                  {
+                    "bg-blue-950 text-blue-800": isActive,
+                  }
+                )
+              }
+              to="supplies"
+            >
+              All Supplies
+            </NavLink>
           </li>
           <li>
             {" "}
-            <NavLink to="/volunteer">Volunteer</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                cn(
+                  "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                  {
+                    "bg-blue-950 text-blue-800": isActive,
+                  }
+                )
+              }
+              to="/volunteer"
+            >
+              Volunteer
+            </NavLink>
           </li>
           <li>
             {" "}
-            <NavLink to="/about-us">About Us</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                cn(
+                  "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                  {
+                    "bg-blue-950 text-blue-800": isActive,
+                  }
+                )
+              }
+              to="/about-us"
+            >
+              About Us
+            </NavLink>
           </li>
           <li>
             {" "}
-            <NavLink to="/community">Community</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                cn(
+                  "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                  {
+                    "bg-blue-950 text-blue-800": isActive,
+                  }
+                )
+              }
+              to="/community"
+            >
+              Community
+            </NavLink>
           </li>
           <li>
             {" "}
-            <NavLink to="/leader-board">Leaderboard</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                cn(
+                  "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                  {
+                    "bg-blue-950 text-blue-800": isActive,
+                  }
+                )
+              }
+              to="/leader-board"
+            >
+              Leaderboard
+            </NavLink>
           </li>
           {token ? (
             <>
               <li>
                 {" "}
-                <NavLink to="/dashboard">Dashboard</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    cn(
+                      "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                      {
+                        "bg-blue-950 text-blue-800": isActive,
+                      }
+                    )
+                  }
+                  to="/dashboard"
+                >
+                  Dashboard
+                </NavLink>
               </li>
               <li onClick={handleLogout} className=" bg-red-900 ">
                 <p>Logout</p>
@@ -198,7 +283,19 @@ const Navbar = () => {
             </>
           ) : (
             <li>
-              <NavLink to="login">Login</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  cn(
+                    "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-blue-800 transition-all flex items-center gap-2",
+                    {
+                      "bg-blue-950 text-blue-800": isActive,
+                    }
+                  )
+                }
+                to="login"
+              >
+                Login
+              </NavLink>
             </li>
           )}
         </ul>

@@ -20,7 +20,12 @@ const Testimonial = () => {
   }
   return (
     <div className="my-28">
-      <h2 className="text-5xl font-bold text-black mb-16 text-center">
+      <h2
+        data-aos="fade-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+        className="text-5xl font-bold text-black mb-16 text-center"
+      >
         Testimonial
       </h2>
       {isLoading && <p>Loading...</p>}

@@ -1,6 +1,11 @@
 const WhatWeDo = () => {
   return (
-    <div className="grid lg:grid-cols-3 grid-cols-1 max-w-6xl gap-10 mx-auto my-16 pb-16">
+    <div
+      data-aos="fade-up"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000"
+      className="grid lg:grid-cols-3 grid-cols-1 max-w-6xl gap-10 mx-auto my-16 pb-16"
+    >
       <div className="card  shadow-md border hover:shadow-2xl">
         <figure className="px-10 pt-8">
           <img

@@ -129,8 +129,11 @@ const Community: React.FC = () => {
             </div>
             <div className="flex justify-center items-center my-8">
               <input
-                style={{ backgroundColor: "#0c2b64" }}
-                className="btn uppercase rounded-none  text-white"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #0c2b64 50%, #4facfe 100%)",
+                }}
+                className="btn rounded-none  text-white"
                 type="submit"
                 value="Post Comment "
               />

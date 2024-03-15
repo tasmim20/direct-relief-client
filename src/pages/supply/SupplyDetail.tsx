@@ -47,7 +47,10 @@ const SupplyDetail = () => {
               <Button
                 onClick={handleDonateNow}
                 className="flex justify-start uppercase items-start  text-center"
-                style={{ backgroundColor: "#0c2b64" }}
+                style={{
+                  background:
+                    "linear-gradient(135deg, #0c2b64 50%, #4facfe 100%)",
+                }}
               >
                 Donate Now
               </Button>

@@ -123,7 +123,9 @@ const CreateSupply = () => {
         </div>
         <div className="form-control mt-6">
           <input
-            style={{ backgroundColor: "#0c2b64" }}
+            style={{
+              background: "linear-gradient(135deg, #0c2b64 50%, #4facfe 100%)",
+            }}
             className="btn text-white w-3/4 mx-auto"
             type="submit"
             value="Submit"
