@@ -19,7 +19,6 @@ interface EventType {
 
 const RecentDonation = () => {
   const { data, isLoading } = useGetSuppliesQuery("");
-  // const [productId , setProductId] = useState(null);
 
   console.log(data);
   if (isLoading) {
@@ -27,7 +26,7 @@ const RecentDonation = () => {
   }
 
   return (
-    <Container>
+    <Container className="">
       <div
         className=" mb-10"
         data-aos="fade-up"
@@ -38,7 +37,11 @@ const RecentDonation = () => {
           Our Recent Donation
         </h2>
       </div>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <div className="py-20">
+          <span className="loading loading-spinner loading-lg text-info"></span>
+        </div>
+      )}
       {data && data.result && (
         <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           {data.result.slice(0, 6).map((item: EventType, index: number) => (

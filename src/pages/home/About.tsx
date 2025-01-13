@@ -18,12 +18,11 @@ const About = () => {
       <div className="hero mb-10 py-20">
         <div className="hero-content flex-col-reverse lg:flex-row-reverse">
           <img
-            data-aos="fade-left"
             className="   rounded-lg lg:w-1/2 sm:w-full"
             src={donation1}
           ></img>
 
-          <div data-aos="fade-right" className="lg:pr-20 ">
+          <div className="lg:pr-20 ">
             <h1 className="lg:text-5xl text-3xl font-bold">Disaster Relief</h1>
 
             <p className="py-6 mt-3">

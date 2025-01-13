@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 @layer base {
+  /* :root {
+    --foreground-rgb-light: 0, 0, 0;
+    --background-start-rgb-light: 214, 219, 220;
+    --background-end-rgb-light: 255, 255, 255;
+
+    --foreground-rgb-dark: 255, 255, 255;
+    --background-start-rgb-dark: 0, 0, 0;
+    --background-end-rgb-dark: 0, 0, 0;
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+  } */
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;

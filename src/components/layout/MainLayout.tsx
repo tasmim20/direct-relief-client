@@ -6,10 +6,8 @@ import WelcomeModal from "../Modal/WelcomeModal";
 const MainLayout = () => {
   return (
     <div>
-      <div className="">
-        <WelcomeModal />
-        <Navbar />
-      </div>
+      <WelcomeModal />
+      <Navbar />
       <Outlet />
       <Footer />
     </div>

@@ -30,7 +30,11 @@ const AllSupplies = () => {
       <div className="pt-32">
         <h2 className="text-3xl text-center font-bold mb-10">All Supplies</h2>
       </div>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <div className="py-20">
+          <span className="loading loading-spinner loading-lg text-info"></span>
+        </div>
+      )}
       {data && data.result && (
         <div className="grid gap-10 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           {data.result.map((item: EventType, index: number) => (

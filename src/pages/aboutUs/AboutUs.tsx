@@ -40,7 +40,11 @@ const AboutUs = () => {
       <h2 className="text-4xl font-bold text-black text-center pt-8 pb-16 ">
         Our Volunteers
       </h2>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <div className="py-20">
+          <span className="loading loading-spinner loading-lg text-info"></span>
+        </div>
+      )}
       {data && data.result && (
         <div className=" border p-0 rounded-2xl">
           <Container>

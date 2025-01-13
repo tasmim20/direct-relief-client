@@ -28,7 +28,11 @@ const Testimonial = () => {
       >
         Testimonial
       </h2>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <div className="py-20">
+          <span className="loading loading-spinner loading-lg text-info"></span>
+        </div>
+      )}
       {data && data.result && (
         <Carousel className="text-black " responsive={responsive}>
           {data.result.map((testimonial: EventType) => (

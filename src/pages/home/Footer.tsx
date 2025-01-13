@@ -43,9 +43,9 @@ const Footer = () => {
 
       <footer
         style={{ backgroundColor: "#274375" }}
-        className="footer py-7 grid px-10 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2    border-t text-white  border-none font-semibold"
+        className="footer py-7 grid  sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2    border-t text-white  border-none font-semibold"
       >
-        <p className="lg:pl-10">Privacy policy</p>
+        <p className="lg:pl-20">Privacy policy</p>
 
         <nav className="">
           <div className="grid grid-flow-col gap-y-2  gap-x-10">
@@ -79,20 +79,7 @@ const Footer = () => {
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
             <Mail size={28} />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-              <path d="m10 15 5-3-5-3z" />
-            </svg>
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"

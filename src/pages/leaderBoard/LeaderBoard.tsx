@@ -30,7 +30,11 @@ const LeaderBoard = () => {
 
   return (
     <div className="py-20 max-w-4xl mx-auto">
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <div className="py-20">
+          <span className="loading loading-spinner loading-lg text-info"></span>
+        </div>
+      )}
       {topTenDonors.length > 0 && (
         <div className=" border p-0 rounded-2xl">
           <h2 className="text-5xl ml-4 text-blue-950 font-semibold  my-10">

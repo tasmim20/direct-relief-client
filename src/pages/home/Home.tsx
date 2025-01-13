@@ -12,22 +12,23 @@ const Home = () => {
     <div className="text-white">
       <Header />
       <Container>
-        <RecentDonation />
+        <div>
+          <RecentDonation />
 
-        <Testimonial />
+          <Testimonial />
 
-        <Gallery />
+          <Gallery />
 
-        <About />
+          <About />
+        </div>
       </Container>
       <div className="  font-bold text-5xl text-black">
         <Partner />
       </div>
-      <Container>
-        <div className="text-black my-20 pb-16">
-          <Hero />
-        </div>
-      </Container>
+
+      <div className="text-black my-20 pb-16">
+        <Hero />
+      </div>
     </div>
   );
 };

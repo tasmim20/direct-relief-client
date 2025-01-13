@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const root = document.documentElement;
+    const root = window.document.documentElement;
 
     if (isDarkMode) {
       root.style.setProperty("--foreground-rgb", "var(--foreground-rgb-dark)");
@@ -49,46 +49,6 @@ const Navbar = () => {
   };
 
   return (
-    // <header
-    //   style={{ backgroundColor: "#0c2b64" }}
-    //   className="h-20 fixed z-[999] w-full text-white font-extrabold"
-    // >
-    //   <nav className="w-full h-full max-w-[1230px] px-[20px] mx-auto flex justify-between items-center">
-    //     <div className="flex justify-start">
-    //       <img className="w-16 sm:w-12 rounded-full" src={who} alt="Logo" />
-    //       <h2 className="text-xl pl-2 pt-2">Direct-Relief</h2>
-    //     </div>
-
-    //     <ul className="space-x-5">
-    //       <NavLink to="/">Home</NavLink>
-    //       <NavLink to="supplies">All Supplies</NavLink>
-    //       {token ? (
-    //         <>
-    //           <NavLink to="/volunteer">Volunteer</NavLink>
-    //           <NavLink to="/about-us">About Us</NavLink>
-    //           <NavLink to="/community">Community</NavLink>
-    //           <NavLink to="/leader-board">Leaderboard</NavLink>
-    //           <NavLink to="/dashboard">Dashboard</NavLink>
-    //           <button
-    //             onClick={handleLogout}
-    //             className="btn text-white bg-red-700 rounded-sm text-sm"
-    //           >
-    //             Logout
-    //           </button>
-    //         </>
-    //       ) : (
-    //         <NavLink to="login">Login</NavLink>
-    //       )}
-    //       <button
-    //         className="theme-toggle m-3 mr-6"
-    //         onClick={toggleTheme}
-    //         aria-label={isDarkMode ? "Light Mode" : "Dark Mode"}
-    //       >
-    //         {isDarkMode ? <FaSun /> : <FaMoon />}
-    //       </button>
-    //     </ul>
-    //   </nav>
-    // </header>
     <div
       style={{ backgroundColor: "#0c2b64" }}
       className=" navbar uppercase h-20  fixed z-[999] w-full text-white font-bold text-sm"
@@ -302,7 +262,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <button
-          className="theme-toggle mr-6"
+          className="theme-toggle pr-6"
           onClick={toggleTheme}
           aria-label={isDarkMode ? "Light Mode" : "Dark Mode"}
         >

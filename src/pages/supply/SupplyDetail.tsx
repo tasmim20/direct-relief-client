@@ -26,7 +26,11 @@ const SupplyDetail = () => {
       <h2 className="text-center font-bold text-4xl mt-16 mb-8">
         Details about this Donation
       </h2>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && (
+        <div className="py-20">
+          <span className="loading loading-spinner loading-lg text-info"></span>
+        </div>
+      )}
       {data && (
         <div className="hero mb-10 py-20">
           <div className="hero-content flex-col-reverse lg:flex-row-reverse">

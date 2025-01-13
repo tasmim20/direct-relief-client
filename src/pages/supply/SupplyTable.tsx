@@ -62,7 +62,11 @@ const SupplyTable = () => {
           </Button>
         </div>
 
-        {isLoading && <p>Loading...</p>}
+        {isLoading && (
+          <div className="py-20">
+            <span className="loading loading-spinner loading-lg text-info"></span>
+          </div>
+        )}
         {data && data.result && (
           <div className="mt-10 border p-0 rounded-2xl ">
             <Table>
